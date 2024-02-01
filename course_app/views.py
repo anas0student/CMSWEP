@@ -97,7 +97,7 @@ def topics_page(request, course_id):
 
 def youtube_results_page(request, topic_id):
     topic = Topic.objects.get(pk=topic_id)
-    youtube_api_key = 'your_youtube_api_key'
+    youtube_api_key = 'AIzaSyCl1AgLuehYUSn3L_gfiGgx5cXwdvODhs4'
     youtube_query = topic.youtube_topic_query
 
     response = requests.get(f'https://www.googleapis.com/youtube/v3/search?q={youtube_query}&key={youtube_api_key}')
